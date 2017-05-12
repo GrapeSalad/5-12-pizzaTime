@@ -35,10 +35,7 @@ h3 {
 #pizzaOrder {
   margin: 0 0 -3px;
   padding-bottom: 0;
-  border-top: 4px solid #C72100;
-  border-left: 4px solid #C72100;
-  border-right: 4px solid #C72100;
-  border-bottom: none;
+  border: 4px solid #C72100;
   cursor:  default;
 }
 
