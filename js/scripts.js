@@ -24,18 +24,28 @@ pizza.prototype.costOf = function(crust, toppings, size){
     currentCost += 6;
   }
   else{
-    alert("If you'd like to request a new size of pizza please send the management team an email.");
+    currentCost = currentCost;
   }
   //toppings cost calculation
-  var toppingsCost = 0;
-  for(var i=0; i<toppings.length; i++){
-    toppingsCost += toppings[i];
+  if(toppings === undefined){
+    finalCost = currentCost;
   }
-  finalCost = currentCost + toppingsCost;
+  else{
+    var toppingsCost = 0;
+    for(var i=0; i<toppings.length; i++){
+      toppingsCost += toppings[i];
+    }
+    finalCost = currentCost + toppingsCost;
+  }
   return finalCost;
 };
 
-
+//Title Case conversion
+function toTitleCase(string){
+  return string.replace(/\w\S*/g, function(text){
+    return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
+  });
+};
 
 
 
@@ -43,15 +53,35 @@ pizza.prototype.costOf = function(crust, toppings, size){
 $(document).ready(function(){
   $("#pizzaOrder").submit(function(event){
     event.preventDefault();
+
+    //remove duplication
+    $("#crustOut").empty();
+    $("#toppingsOut").empty();
+    $("#sizeOut").empty();
+    $("#pizzaCostOut").empty();
+    $("#clientNameOut").empty();
+    $("#dynamicPizza").empty();
+
+    //receive input
     var size = $("input:radio[name=size]:checked").val();
     var crust = $("input:radio[name=crust]:checked").val();
     var toppings = [];
     $("input:checkbox[name=toppings]:checked").each(function(){
       var selectedToppings = parseInt($(this).val());
       toppings.push(selectedToppings);
+      //output
+      $("#toppingsOut").append('<li>' + toTitleCase($(this).attr('alt')) + '</li>');
+      //changing background images based on toppings
+      $("#dynamicPizza").append('<div class="' + $(this).attr('alt') + '"></div>');
     });
-
+    var clientName = $("#clientName").val();
     var newPizza = new pizza(crust, toppings, size);
-    console.log(newPizza.costOf(crust, toppings, size));
+
+    //output
+    $("#output").show();
+    $("#clientNameOut").append(", " + toTitleCase(clientName) + ", ");
+    $("#crustOut").append(toTitleCase(crust) + " at $" + newPizza.costOf(crust));
+    $("#sizeOut").append(toTitleCase(size) + " at $" + newPizza.costOf(size));
+    $("#pizzaCostOut").append(newPizza.costOf(crust, toppings, size));
   });
 });

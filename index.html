@@ -10,67 +10,98 @@
   </head>
   <body>
     <div class="container">
-      <h1>Welcome to our humble pie hole</h1>
-      <h4>Get stuffed!</h4>
-      <div class="row">
-        <div class="col-md-6">
-          <form id="pizzaOrder" class="form-control">
-            <h4>Pizza Size<h4>
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="personal">
-                Personal - $4
-              </label>
+        <!-- START MAIN CONTENT -->
+        <div id="mainContent">
+          <h1>Welcome to our humble pie hole</h1>
+          <h3>Get stuffed!</h3>
+          <div class="row">
+            <div class="col-xs-6">
+              <form id="pizzaOrder" class="form-control">
+                <h4>Pizza Size<h4>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="size" value="personal">
+                    Personal - $4
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="size" value="regular" checked>
+                    Regular - $6
+                  </label>
+                </div>
+                <div class="form-group">
+                  <h4>Choose your toppings</h4>
+                  <input type="checkbox" name="toppings" value="1" alt="basalmic vinegar">Basalmic Vinegar - $1<br>
+                  <input type="checkbox" name="toppings" value="1" alt="calabrian chili oil">Calabrian Chili Oil - $1<br>
+                  <input type="checkbox" name="toppings" value="2" alt="arugula">Arugula - $2<br>
+                  <input type="checkbox" name="toppings" value="2" alt="spinach">Spinach - $2<br>
+                  <input type="checkbox" name="toppings" value="2" alt="olives">Olives - $2<br>
+                  <input type="checkbox" name="toppings" value="2" alt="mushrooms">Mushrooms - $2<br>
+                  <input type="checkbox" name="toppings" value="2" alt="calabrian chilis">Calabrian Chilis - $2<br>
+                  <input type="checkbox" name="toppings" value="2" alt="goat cheese">Goat Cheese - $2<br>
+                  <input type="checkbox" name="toppings" value="2" alt="feta cheese">Feta Cheese - $2<br>
+                  <input type="checkbox" name="toppings" value="3" alt="pepperoni">Pepperoni - $3<br>
+                  <input type="checkbox" name="toppings" value="3" alt="meatballs">Meatballs - $3<br>
+                  <input type="checkbox" name="toppings" value="3" alt="porchetta">Porchetta - $3<br>
+                </div>
+                <h4>Crust Type<h4>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="crust" value="semolina" checked>
+                    Semolina - $3
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="crust" value="cornmeal">
+                    Cornmeal - $3
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="crust" value="glutenFree">
+                    Gluten-free - $4
+                  </label>
+                </div>
+                <div>
+                  <label for="clientName">Name:</label>
+                  <input type="text" id="clientName" value="">
+                </div>
+                <!-- <div>
+                  <label for="userAddress">Street Address:</label>
+                  <input type="text" id="userAddress" value="">
+                </div>
+                <div>
+                  <label for="userCity">City:</label>
+                  <input type="text" id="userCity" value="">
+                </div> -->
+                <button id="orderBtn" type="submit" class="btn">Order</button>
+              </form>
             </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="regular" checked>
-                Regular - $6
-              </label>
+            <div class="col-md-6">
+              <div id="dynamicPizza">
+              </div>
             </div>
-            <div class="form-group">
-              <h4>Choose your toppings</h4>
-              <input type="checkbox" name="toppings" value="1"> Basalmic Vinegar - $1<br>
-              <input type="checkbox" name="toppings" value="1">Calabrian Chili Oil - $1<br>
-              <input type="checkbox" name="toppings" value="2">Arugula - $2<br>
-              <input type="checkbox" name="toppings" value="2">Spinach - $2<br>
-              <input type="checkbox" name="toppings" value="2">Olives - $2<br>
-              <input type="checkbox" name="toppings" value="2">Mushrooms - $2<br>
-              <input type="checkbox" name="toppings" value="2">Calabrian Chilis - $2<br>
-              <input type="checkbox" name="toppings" value="2">Goat Cheese - $2<br>
-              <input type="checkbox" name="toppings" value="2">Feta Cheese - $2<br>
-              <input type="checkbox" name="toppings" value="3">Pepperoni - $3<br>
-              <input type="checkbox" name="toppings" value="3">Meatballs - $3<br>
-              <input type="checkbox" name="toppings" value="3">Porchetta - $3<br>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div id="output">
+                <p>Thank you<span id="clientNameOut"></span> for ordering a pizza.<br>Here is your receipt:</p>
+                <ul>
+                  <li>Crust: <span id="crustOut"></span></li>
+                  <li>Toppings:
+                    <ul id="toppingsOut">
+                    </ul>
+                  </li>
+                  <li>Size: <span id="sizeOut"></span></li>
+                  <li>Cost of Pizza: $<span id="pizzaCostOut"></span></li>
+                </ul>
+              </div>
             </div>
-            <h4>Crust Type<h4>
-            <div class="radio">
-              <label>
-                <input type="radio" name="crust" value="semolina" checked>
-                Semolina - $3
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="crust" value="cornmeal">
-                Cornmeal - $3
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="crust" value="glutenFree">
-                Gluten-free - $4
-              </label>
-            </div>
-
-            <button id="orderBtn" type="submit" class="btn">Order</button>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div id="output">
           </div>
         </div>
-      </div>
+        <!-- END MAIN CONTENT -->
     </div>
   </body>
 </html>

@@ -8,12 +8,12 @@ Once the order is placed the user will see the cost of what they selected, and t
 
 
 NEXT STEPS
-1.  Return order details
-2.  Return order total
+<!-- 1.  Return order details
+2.  Return order total -->
 3.  Allow user to order more than one pizza
 4.  Add delivery capability?
 5.  Allow user to choose delivery options
 6.  Accept user address input
 7.  Calculate delivery route in google maps
 8.  Update toppings list
-9.  MAKE PRETTY
+9.  MAKE PRETTY maybe add actual ingredients to pizza in background based on order
