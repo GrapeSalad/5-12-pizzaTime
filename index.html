@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container">
-        <!-- START MAIN CONTENT -->
+<!-- START MAIN CONTENT -->
         <div id="mainContent">
           <h1>Welcome to our humble pie hole</h1>
           <h3>Get stuffed!</h3>
@@ -19,6 +19,7 @@
             <div class="col-xs-6">
               <form id="pizzaOrder" class="form-control">
                 <h4>Pizza Size<h4>
+<!-- SIZE -->
                 <div class="radio">
                   <label>
                     <input type="radio" name="size" value="personal">
@@ -31,6 +32,7 @@
                     Regular - $6
                   </label>
                 </div>
+<!-- TOPPINGS -->
                 <div class="form-group">
                   <h4>Choose your toppings</h4>
                   <input type="checkbox" name="toppings" value="1" alt="balsamic vinegar">Balsamic Vinegar - $1<br>
@@ -46,6 +48,7 @@
                   <input type="checkbox" name="toppings" value="3" alt="meatballs">Meatballs - $3<br>
                   <input type="checkbox" name="toppings" value="3" alt="porchetta">Porchetta - $3<br>
                 </div>
+<!-- CRUST -->
                 <h4>Crust Type<h4>
                 <div class="radio">
                   <label>
@@ -69,6 +72,7 @@
                   <label for="clientName">Name:</label>
                   <input type="text" id="clientName" value="">
                 </div>
+<!-- ADDRESS FOR A FUTURE FEATURE -->
                 <!-- <div>
                   <label for="userAddress">Street Address:</label>
                   <input type="text" id="userAddress" value="">
@@ -80,12 +84,14 @@
                 <button id="orderBtn" type="submit" class="btn">Order</button>
               </form>
             </div>
+<!-- DYNAMIC PIZZA -->
             <div class="col-md-6">
               <div id="dynamicPizza">
               </div>
             </div>
           </div>
           <div class="row">
+<!-- OUTPUT -->
             <div class="col-xs-6">
               <div id="output">
                 <p>Thank you<span id="clientNameOut"></span> for ordering a pizza.<br>Here is your receipt:</p>
@@ -96,13 +102,13 @@
                     </ul>
                   </li>
                   <li>Size: <span id="sizeOut"></span></li>
-                  <li>Cost of Pizza: $<span id="pizzaCostOut"></span></li>
+                  <li class="totalCost">Cost of Pizza: $<span id="pizzaCostOut"></span></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <!-- END MAIN CONTENT -->
+<!-- END MAIN CONTENT -->
     </div>
   </body>
 </html>

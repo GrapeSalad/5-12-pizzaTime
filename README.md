@@ -35,7 +35,7 @@ In this project I spent more time trying to name the variables appropriately to 
 This code is available for any and all to use or borrow from. To run the code in your browser, follow the directions in the installation instructions to step 5. Once the files are downloaded, find them in your file browser and double click on the index.html file.
 
 ### KNOWN BUGS
-There is one feature that may be viewed as a bug by some, that of the dynamic pizza builder not moving with the rest of the content. This is intentional.
+There is one feature that may be viewed as a bug by some, that of the dynamic pizza builder not moving with the rest of the content. This is intentional and is necessary to have the proper functionality.
 
 ### HISTORY/CREDIT
 I, GrapeSalad, built this website on Friday the 12th of May in 2017.
@@ -44,7 +44,7 @@ I, GrapeSalad, built this website on Friday the 12th of May in 2017.
 Open Source Licensing via the MIT software license.
 
 
-### POTENTIAL FUTURE FUNCTIONALITY FOR THE SITE
+##### POTENTIAL FUTURE FUNCTIONALITY FOR THE SITE
 I plan on trying to develop this site further, and here are a few of my ideas for increasing functionality:
 1.  Allow user to order more than one pizza
 2.  Add delivery capability?

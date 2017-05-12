@@ -1,4 +1,4 @@
-//BUSINESS LOGIC
+//////////////////////////////BUSINESS LOGIC
 function pizza(crust, toppings, size){
   this.crust = crust;
   this.toppings = toppings;
@@ -40,7 +40,7 @@ pizza.prototype.costOf = function(crust, toppings, size){
   return finalCost;
 };
 
-//Title Case conversion
+//Title Case Conversion
 function toTitleCase(string){
   return string.replace(/\w\S*/g, function(text){
     return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
@@ -49,7 +49,7 @@ function toTitleCase(string){
 
 
 
-//USER INTERFACE LOGIC
+//////////////////////////////USER INTERFACE LOGIC
 $(document).ready(function(){
   $("#pizzaOrder").submit(function(event){
     event.preventDefault();
@@ -70,7 +70,7 @@ $(document).ready(function(){
       var selectedToppings = parseInt($(this).val());
       toppings.push(selectedToppings);
       //output
-      $("#toppingsOut").append('<li>' + toTitleCase($(this).attr('alt')) + '</li>');
+      $("#toppingsOut").append('<li>' + toTitleCase($(this).attr('alt')) + ' at $' + parseInt($(this).val()) + '</li>');
       //changing background images based on toppings
       $("#dynamicPizza").append('<div class="' + $(this).attr('alt') + '"></div>');
     });

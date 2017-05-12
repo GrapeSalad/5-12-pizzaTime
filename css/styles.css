@@ -1,13 +1,14 @@
-*{
+html {
+  cursor: url("../img/pizzaIcon.png"), auto;
 }
 
 body {
-  cursor: url("../img/pizzaIcon.png"), auto;
   margin: 0;
   padding: 0;
   background: url("../img/fireBackground.jpg") no-repeat center fixed;
   color: #000;
   z-index: -20;
+  font-family: serif;
 }
 
 #pizzaOrder, #output, h1, h3 {
@@ -23,6 +24,7 @@ h1 {
   text-align: center;
   width: 600px;
   border: 4px solid #24662A;
+  border-radius: 10px;
 }
 
 h3 {
@@ -30,19 +32,23 @@ h3 {
   text-align: center;
   width: 200px;
   border: 4px solid #EDDFD1;
+  border-radius: 10px;
 }
 
 #pizzaOrder {
   margin: 0 0 -3px;
   padding-bottom: 0;
   border: 4px solid #C72100;
+  border-radius: 10px;
   cursor:  default;
 }
 
 #output {
+  display: none;
   margin: 0;
   padding-top: 0;
   border: 4px solid #C72100;
+  border-radius: 10px;
 }
 
 #orderBtn {
@@ -54,6 +60,17 @@ h3 {
   top: -250px;
 }
 
+li {
+  list-style: none;
+}
+
+.totalCost {
+  background: rgba(232, 131, 127, 0.8);
+  border-radius: 3px;
+  width: 150px;
+  padding: 3px;
+  font-size: 16px;
+}
 
 /*FOR THE DYNAMIC PIZZA*/
 #dynamicPizza {
