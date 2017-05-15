@@ -12,11 +12,10 @@ Once the order is placed the user will see the cost of what they selected, the t
 
 | BEHAVIOR | INPUT | OUTPUT |
 |---|---|---|
-| size entry will be two variables | regular or personal | 6 and 4 |
-| crust entry will be 3 variables | semolina, cornmeal, glutenFree | 3, 3, and 4 |
-| toppings entry will be several variables as a checklist | Goat Cheese  | 2 |
-| toppings also holds an alt value string | Goat Cheese | alt="goat cheese" |
-| user name is their own choice, no stringent rules for this except Initial Case | grApe SALAD | Grape Salad |
+| User will select a size | Regular | "Regular at $4" |
+| User will select a crust | Semolina | "Semolina at $3" |
+| User will select any amount of toppings | Goat Cheese, Arugula  | "Goat Cheese at $2; Arugula at $2" |
+| User enters name with odd capitalization | grApe SALAD | Grape Salad |
 
 ### INSTALLATION
 https://github.com/GrapeSalad/5-12-pizzaTime is the url that will provide access to the code. To run on your computer follow these steps:
